@@ -1,0 +1,25 @@
+name: "Image Sync Actions for HANU Charts"
+description: "Welcome to the World"
+author: "intelliguy@github.com"
+
+inputs:
+  TMP_DIR:
+    description: "Working Directory"
+    required: true
+    default: "/tmp/temporary_directory"
+  TARGET_PREFIX:
+    description: "Target repo to this sync job"
+    required: true
+    default: "tacouser"
+  REPOS:
+    description: "The list of helm repos used by this sync job"
+    required: true
+    default: "https://tde.sktelecom.com/stash/scm/oreotools/taco-helm.git https://tde.sktelecom.com/stash/scm/oreotools/taco-addons.git"
+
+runs:
+  using: "docker"
+  image: "Dockerfile"
+
+branding:
+  icon: "mic"
+  color: "purple"
